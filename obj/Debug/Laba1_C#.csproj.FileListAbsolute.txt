@@ -1,0 +1,7 @@
+C:\Users\lobko\source\repos\Laba1_C#\bin\Debug\Laba1_C#.exe.config
+C:\Users\lobko\source\repos\Laba1_C#\bin\Debug\Laba1_C#.exe
+C:\Users\lobko\source\repos\Laba1_C#\bin\Debug\Laba1_C#.pdb
+C:\Users\lobko\source\repos\Laba1_C#\obj\Debug\Laba1_C#.csproj.AssemblyReference.cache
+C:\Users\lobko\source\repos\Laba1_C#\obj\Debug\Laba1_C#.csproj.CoreCompileInputs.cache
+C:\Users\lobko\source\repos\Laba1_C#\obj\Debug\Laba1_C#.exe
+C:\Users\lobko\source\repos\Laba1_C#\obj\Debug\Laba1_C#.pdb
