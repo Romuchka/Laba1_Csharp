@@ -10,23 +10,9 @@ namespace Laba_C_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Выберите режим:");
-            Console.WriteLine("1 - Основная программа");
-            Console.WriteLine("2 - Запуск тестов");
+            ApplianceManager manager = new ApplianceManager();
+            manager.Run();
 
-            string choice = Console.ReadLine();
-
-            if (choice == "2")
-            {
-                // Запуск тестов
-                ApplianceTester.RunAllTests();
-            }
-            else
-            {
-                // Основная программа
-                ApplianceManager manager = new ApplianceManager();
-                manager.Run();
-            }
         }
     }
 }
