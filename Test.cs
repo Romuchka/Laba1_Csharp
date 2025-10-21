@@ -30,16 +30,16 @@ namespace Laba_C_
                     appliance.GetPrice() == 100.0 &&
                     appliance.GetYear() == 2020)
                 {
-                    Console.WriteLine("✓ УСПЕХ: Объект создан корректно");
+                    Console.WriteLine("УСПЕХ: Объект создан корректно");
                 }
                 else
                 {
-                    Console.WriteLine("✗ ОШИБКА: Данные не совпадают");
+                    Console.WriteLine("ОШИБКА: Данные не совпадают");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"✗ ОШИБКА: {ex.Message}");
+                Console.WriteLine($"ОШИБКА: {ex.Message}");
             }
         }
 
@@ -51,26 +51,26 @@ namespace Laba_C_
             try
             {
                 var wm = new WashingMachine("WM100", "Brand", 500.0, 2023, -5.0, "Front Load", 1200);
-                Console.WriteLine("✗ ОШИБКА: Ожидалось исключение для отрицательной capacity");
+                Console.WriteLine("ОШИБКА: Ожидалось исключение для отрицательной capacity");
             }
             catch (ArgumentException ex) when (ex.Message.Contains("Capacity"))
             {
-                Console.WriteLine("✓ УСПЕХ: Отрицательная capacity отклонена");
+                Console.WriteLine("УСПЕХ: Отрицательная capacity отклонена");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"✗ ОШИБКА: Неожиданное исключение: {ex.Message}");
+                Console.WriteLine($"ОШИБКА: Неожиданное исключение: {ex.Message}");
             }
 
             // Тест корректных данных
             try
             {
                 var wm = new WashingMachine("GoodWM", "Brand", 500.0, 2023, 8.0, "Front Load", 1200);
-                Console.WriteLine("✓ УСПЕХ: Корректные данные приняты");
+                Console.WriteLine("УСПЕХ: Корректные данные приняты");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"✗ ОШИБКА: {ex.Message}");
+                Console.WriteLine($"ОШИБКА: {ex.Message}");
             }
         }
 
@@ -82,22 +82,22 @@ namespace Laba_C_
             try
             {
                 var microwave = new Microwave("MW200", "Brand", 200.0, 2022, 0, "Convection", 25);
-                Console.WriteLine("✗ ОШИБКА: Ожидалось исключение для power = 0");
+                Console.WriteLine("ОШИБКА: Ожидалось исключение для power = 0");
             }
             catch (ArgumentException ex) when (ex.Message.Contains("Power"))
             {
-                Console.WriteLine("✓ УСПЕХ: Нулевая мощность отклонена");
+                Console.WriteLine("УСПЕХ: Нулевая мощность отклонена");
             }
 
             // Тест отрицательного размера
             try
             {
                 var microwave = new Microwave("MW200", "Brand", 200.0, 2022, 800, "Convection", -10);
-                Console.WriteLine("✗ ОШИБКА: Ожидалось исключение для отрицательного размера");
+                Console.WriteLine("ОШИБКА: Ожидалось исключение для отрицательного размера");
             }
             catch (ArgumentException ex) when (ex.Message.Contains("Turntable"))
             {
-                Console.WriteLine("✓ УСПЕХ: Отрицательный размер отклонен");
+                Console.WriteLine("УСПЕХ: Отрицательный размер отклонен");
             }
         }
 
@@ -120,30 +120,28 @@ namespace Laba_C_
                     appliance.PrintInfo();
                 }
 
-                Console.WriteLine("✓ УСПЕХ: Полиморфизм работает корректно");
+                Console.WriteLine("УСПЕХ: Полиморфизм работает корректно");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"✗ ОШИБКА: {ex.Message}");
+                Console.WriteLine($"ОШИБКА: {ex.Message}");
             }
         }
 
         private static void TestInputHelper()
         {
             Console.WriteLine("\nТест 5: Валидация года в InputHelper");
-
-            // Можно протестировать, подменяя Console.In
             Console.WriteLine("(Этот тест требует ручного ввода)");
             Console.WriteLine("Попробуйте ввести неверный год (например, 1979 или 2025)");
 
             try
             {
                 int year = InputHelper.InputYear("Введите год для теста: ");
-                Console.WriteLine($"✓ УСПЕХ: Корректный год принят: {year}");
+                Console.WriteLine($"УСПЕХ: Корректный год принят: {year}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"✗ ОШИБКА: {ex.Message}");
+                Console.WriteLine($"ОШИБКА: {ex.Message}");
             }
         }
     }
